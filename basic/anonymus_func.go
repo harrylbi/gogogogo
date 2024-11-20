@@ -8,7 +8,7 @@ func register(name string,blacklist Blacklist) {
 	if blacklist(name){
 		 fmt.Println("you are bloked", name)
 	}else{
-		 fmt.Sprintf("Welcome %s", name)
+		 fmt.Println("Welcome %s", name)
 	}
 }
 
@@ -16,11 +16,11 @@ func main() {
 	blacklist := func(name string) bool{
 		return name == "anjing"
 	}
-	register("anjing", blacklist)
+	register("harry", blacklist)
 
-	register(= func(name string)) bool{
-        return name == "harry"
-    }
+	register("anjing", func (name string) bool{
+		return name == "anjing"
+	})
 
 }
 
